@@ -4,7 +4,7 @@ import React from 'react';
 function About() {
   return (
   <div className='about-container'>
-  <h1>FLUFFY ADOPTIONS</h1>
+  <h1>RescueMePets</h1>
   {/* <img src='https://example.com/animal-adoption-center-image' alt='animal-adoption-center' style={{width:"100%"}}/> */}
   <p>At our animal adoption center, we are dedicated to finding loving homes for a variety of animals. Our team of passionate animal lovers works tirelessly to match animals with caring owners who will provide them with the love and care they deserve.</p>
   

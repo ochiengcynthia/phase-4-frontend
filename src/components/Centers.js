@@ -11,11 +11,11 @@ function Centers() {
   }, []);
 
   return (
-    <div>
+    <div className="centers-container">
       {centers && centers.map(center => (
         <div key={center.id}>
           <h2>{center.name}</h2>
-          <p>ID: {center.id}</p>
+          {/* <p>ID: {center.id}</p> */}
           <p>Location: {center.location}</p>
         </div>
       ))}

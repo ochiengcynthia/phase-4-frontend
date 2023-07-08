@@ -39,7 +39,7 @@ function Home() {
 
   return (
     <div>
-      <h1>Welcome to Fluffy Adoption Center</h1>
+      <h1>Welcome to RescueMePets</h1>
       <form id="login-form" onSubmit={handleSubmit}>
 
         <div className="form-group">

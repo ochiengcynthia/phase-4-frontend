@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Adoptions() {
+function Adoption() {
   const [adoptions, setAdoptions] = useState([]);
 
   useEffect(() => {
@@ -23,4 +23,4 @@ function Adoptions() {
   );
 }
 
-export default Adoptions;
+export default Adoption;
