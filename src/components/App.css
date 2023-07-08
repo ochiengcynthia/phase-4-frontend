@@ -198,45 +198,34 @@ body {
     box-sizing: border-box;
   }
   
-  /* Centers Container */
-.centers-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Center Card */
-.center-card {
-  width: 300px;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.center-card h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.center-card p {
-  margin-bottom: 5px;
-}
-
-.center-card button {
-  padding: 10px 20px;
-  background-color: #ff6f00;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.center-card button:hover {
-  background-color: #ff9000;
-}
+  
+  .centers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .centers-container > div {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(49, 40, 40);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .centers-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f8f8f8;
+  }
+  
+  .centers-container p {
+    margin-bottom: 5px;
+    color: #f8f8f8;
+  }
 
   
