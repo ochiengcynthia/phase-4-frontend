@@ -1,36 +1,25 @@
-import "./components/App.css";
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Adoptions from './components/Adoptions';
 import Animals from './components/Animals';
 import Centers from './components/Centers';
-import {Switch, Route} from "react-router-dom"
-import Navbar from './components/Navbar';
 
 function App() {
-
   return (
     <>
-    <Navbar />
-    <Switch>
-    <Route path="/About">
-    <About />
-    </Route>
-    <Route path="/Centers">
-    <Centers/>
-    </Route>
-    <Route path="/Animals">
-    <Animals/>
-    </Route>
-    <Route path="/Adoptions">
-    <Adoptions/>
-    </Route>
-      <Route exact path="/">
-    <Home />
-    </Route>
-    </Switch>
+      <Navbar />
+      <Routes>
+        <Route path="/About" element={<About />} />
+        <Route path="/Centers" element={<Centers />} />
+        <Route path="/Animals" element={<Animals />} />
+        <Route path="/Adoptions" element={<Adoptions />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

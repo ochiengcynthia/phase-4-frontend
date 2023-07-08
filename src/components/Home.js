@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 let isFilled = false;
 function Home() {
@@ -8,31 +8,30 @@ function Home() {
     password: ""
   });
 
-  const history = useHistory();
-
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
-    isFilled = true
+    isFilled = true;
     event.preventDefault();
-    fetch(`http://127.0.0.1:5555/users`, {
+    fetch(`http://127.0.0.1:5000/users`, {
       method: "POST",
       headers: {
         "Content-type": "application/json"
       },
       body: JSON.stringify(formData)
     })
-    .then(response => response.json())
-    .then(data => {
-      setFormData({
-        username: "",
-        password: ""
+      .then(response => response.json())
+      .then(data => {
+        setFormData({
+          username: "",
+          password: ""
+        });
+        if (isFilled === true) {
+          navigate('/About');
+        }
       });
-      if (isFilled === true) {
-        history.push('/About');
-      }
-    });
   }
-  
+
   function handleChange(event) {
     const { name, value } = event.target;
     setFormData(formData => ({ ...formData, [name]: value }));
@@ -42,7 +41,7 @@ function Home() {
     <div>
       <h1>Welcome to Fluffy Adoption Center</h1>
       <form id="login-form" onSubmit={handleSubmit}>
-        
+
         <div className="form-group">
           <label htmlFor="email">EMAIL ADDRESS</label>
           <input

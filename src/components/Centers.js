@@ -4,7 +4,7 @@ function Centers() {
   const [centers, setCenters] = useState(null);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/centers')
+    fetch('http://127.0.0.1:5000/centers')
       .then(response => response.json())
       .then(data => setCenters(data))
       .catch(error => console.log(error));

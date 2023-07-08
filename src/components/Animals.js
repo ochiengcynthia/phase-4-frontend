@@ -5,7 +5,7 @@ function Animals() {
   const [animals, setAnimals] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/animals')
+    fetch('http://127.0.0.1:5000/animals')
       .then(response => response.json())
       .then(data => setAnimals(data))
       .catch(error => console.log(error));
